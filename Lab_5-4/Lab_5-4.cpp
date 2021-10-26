@@ -1,6 +1,7 @@
 ﻿// Лабораторна робота № 5.4
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 double S0(const int N)
 {	
@@ -44,8 +45,11 @@ double S4(const int N, const int i, double t)
 int main()
 {
 	int N; 
-	cout << "N = "; cin >> N;
-	cout << "(iter) S0 = " << S0(N) << endl;
+	cout << fixed;
+
+	cout.precision(20);
+	cout <<  "N = "; cin >> N;
+	cout <<"(iter) S0 = " << S0(N) << endl;
 	cout << "(rec up ++) S1 = " << S1(N, N) << endl;
 	cout << "(rec up --) S2 = " << S2(N, 22) << endl;
 	cout << "(rec down ++) S3 = " << S3( N, N, 0) << endl;
